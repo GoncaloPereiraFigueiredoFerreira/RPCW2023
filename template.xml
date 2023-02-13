@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifesto>
+    <meta>
+        <titulo>Titulo</titulo>
+        <subtitulo>(Optional)</subtitulo>
+        <data>AAAA-MM-DD</data>
+        <autor>
+            <nome>Nome do autor</nome>
+            <id>Numero de aluno</id>
+            <gitlink>Link para o repositorio git</gitlink>
+        </autor>
+        <uc>RPCW</uc>
+    </meta>
+    <resumo>
+        <p>Paragrafo 1 <b>BOLD</b>    </p>
+        <p>Paragrafo 2 <i>ITALICO</i> </p>
+        <p>Paragrafo 3 <xref url="URL para recurso"> texto da referencia</xref> </p>
+    </resumo>
+    <resultados>
+        <resultado path="link relativo para o ficheiro"> Descrição do que é</resultado>
+    </resultados>
+</manifesto>
