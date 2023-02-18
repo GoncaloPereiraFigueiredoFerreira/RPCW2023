@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifesto>
+    <meta>
+        <titulo>Trabalho de casa 1</titulo>
+        <!-- <subtitulo></subtitulo>-->
+        <data>2023-02-18</data>
+        <autor>
+            <nome>Gonçalo Ferreira</nome>
+            <id>pg50404</id>
+            <gitlink>https://github.com/GoncaloPereiraFigueiredoFerreira/RPCW2023.git</gitlink>
+        </autor>
+        <uc>RPCW</uc>
+    </meta>
+    <resumo>
+        <p>Para o primeiro trabalho de casa da UC de RPCW, foi nos pedido que desenvolvessemos uma página HTML sobre um dos temas sugeridos e que fosse adicionado ao exercício da aula, as ligações entre cidades.</p> 
+        <p>O tema escolhido para a página HTML, foi "Hipopotamo", e nesta diretoria é possivel encontrar o ficheiro, hipopotamo.html, que contém, o trabalho desenvolvido</p>
+        <p>Quanto ao trabalho começado em sala de aula, este foi também concluido com sucesso; O mesmo poderá ser encontrado nos 3 ficheiros mapa-virtual.(json|html|py)</p>
+    </resumo>
+    <resultados>
+        <resultado path="hipopotamo.html">Ficheiro HTML criado, que contém a página HTML sobre hipopótamos</resultado>
+        <resultado path="mapa-virtual.html">Resultado final da produção do ficheiro HTML com o mapa virtual</resultado>
+        <resultado path="mapa-virtual.py">Código python que dá parse ao ficheiro mapa-virtual.json, e gera o HTML resultado</resultado>
+        <resultado path="mapa-virtual.json">Ficheiro que contém a base de dados do mapa virtual</resultado>
+    </resultados>
+</manifesto>
