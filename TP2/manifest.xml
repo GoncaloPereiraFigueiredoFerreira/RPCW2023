@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../template.dtd" type="application/xml-dtd"?>
+<manifesto>
+    <meta>
+        <titulo>Trabalho de casa 2</titulo>
+        <data>2023-02-23</data>
+        <autor>
+            <nome>Gonçalo Ferreira</nome>
+            <id>pg50404</id>
+            <gitlink>https://github.com/GoncaloPereiraFigueiredoFerreira/RPCW2023.git</gitlink>
+        </autor>
+        <uc>RPCW</uc>
+    </meta>
+    <resumo>
+        <p>Para este 2º trabalho de casa de RPCW, foi nos pedido para numa primeira fase, subdividir o ficheiro arq.xml em cada um dos seus elementos, e criar um servidor em nodeJS que permitisse o seu acesso através de um browser. Para a segunda fase, o projeto requiriu a criação de uma página de indice que liga todos os ficheiros xml criados. Por fim, para a terceira e ultima fase, foi nos pedido que transformassemos os ficheiros xml em páginas html com a mesma informação.</p>
+        <p>Todas estas fases foram completadas, e a listagem de resultados descreverá o conteúdo de cada ficheiro. </p>
+     
+    </resumo>
+    <resultados>
+        <resultado path="index.html">Página html que contém um indice de todos os arqueosítios retirados do ficheiro de dados</resultado>
+        <resultado path="arq.py">Ficheiro que contém o código python, responsável pela criação do index e transformação do ficheiro xml nos correspondentes ficheiros html</resultado>
+        <resultado path="arq.xml">Ficheiro xml que contém dados sobre os arqueosítios</resultado>
+        <resultado path="xmlTohtml.py">Código python que contém a função responsável por traduzir xml em html</resultado>
+        <resultado path="arqServer.js">Código JavaScript que contém o servidor que apresenta todas as páginas html</resultado>
+        <resultado path="Arq Files/*.xml">Páginas xml criadas para completar a fase 1</resultado>
+        <resultado path="Arq Files/*.html">Páginas html criadas a partir dos ficheiros xml, para completar a fase 3</resultado>
+
+    </resultados>
+</manifesto>

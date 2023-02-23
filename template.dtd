@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT manifesto (meta,resumo,resultados)>
+<!ELEMENT meta (titulo,subtitulo?,data, autor, uc)>
+<!ELEMENT titulo (#PCDATA)>
+<!ELEMENT subtitulo (#PCDATA)>
+<!ELEMENT data (#PCDATA)>
+<!ELEMENT uc (#PCDATA)>
+
+<!ELEMENT autor (nome,id,gitlink)>
+<!ELEMENT nome (#PCDATA)>
+<!ELEMENT id (#PCDATA)>
+<!ELEMENT gitlink (#PCDATA)>
+
+<!ELEMENT resumo (p+)>
+<!ELEMENT p (#PCDATA | xref | b | i)*>
+<!ELEMENT xref (#PCDATA)>
+<!ATTLIST xref url CDATA #REQUIRED>
+<!ELEMENT b (#PCDATA| xref | i)*>
+<!ELEMENT i (#PCDATA| xref | b)*>
+
+<!ELEMENT resultados (resultado+)>
+<!ELEMENT resultado (#PCDATA)>
+<!ATTLIST resultado 
+            path CDATA #REQUIRED
+            identificador CDATA #IMPLIED>
