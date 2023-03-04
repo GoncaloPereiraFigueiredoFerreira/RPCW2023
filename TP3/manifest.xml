@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../template.dtd" type="application/xml-dtd"?>
+<manifesto>
+    <meta>
+        <titulo>Trabalho de casa 3</titulo>
+        <data>2023-03-02</data>
+        <autor>
+            <nome>Gonçalo Ferreira</nome>
+            <id>pg50404</id>
+            <gitlink>https://github.com/GoncaloPereiraFigueiredoFerreira/RPCW2023.git</gitlink>
+        </autor>
+        <uc>RPCW</uc>
+    </meta>
+    <resumo>
+        <p></p>
+    </resumo>
+    <resultados>
+        <resultado path="dataset-result.json"> Descrição do que é</resultado>
+        <resultado path="indexMaker.js"> Descrição do que é</resultado>
+        <resultado path="script.py"> Descrição do que é</resultado>
+        <resultado path="server.js"> Descrição do que é</resultado>
+        <resultado path="pessoas/*.html"> Descrição do que é</resultado>
+    </resultados>
+</manifesto>
