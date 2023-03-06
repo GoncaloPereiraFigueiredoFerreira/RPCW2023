@@ -12,13 +12,14 @@
         <uc>RPCW</uc>
     </meta>
     <resumo>
-        <p></p>
+        <p>Neste TPC3 foi nos pedido que desenvolvessemos um serviço http, que apresenta a informação contida no dataset das pessoas. Aqui será possivel visualizar o perfil de cada utilizador, e observar as listagens de cada entrada de acordo com o seu sexo, profissão e desporto praticado. </p>
+        <p>O TPC foi concluido na sua totalidade; Este é constituido 3 pedaços de código principais (server.js, indexMaker.js e script.py) que são responsáveis por criar o servidor e definir as suas rotas, e a criação das diferentes páginas html</p>
     </resumo>
     <resultados>
-        <resultado path="dataset-result.json"> Descrição do que é</resultado>
-        <resultado path="indexMaker.js"> Descrição do que é</resultado>
-        <resultado path="script.py"> Descrição do que é</resultado>
-        <resultado path="server.js"> Descrição do que é</resultado>
-        <resultado path="pessoas/*.html"> Descrição do que é</resultado>
+        <resultado path="dataset-result.json"> Dataset que contém os dados utilizados durante o trabalho. Neste dataset já foram adicionados os ids para cada uma das entradas </resultado>
+        <resultado path="indexMaker.js"> Ficheiro de código JavaScript que contém as funções responsáveis pela geração das diferentes páginas html que serão apresentadas pelo servidor como resposta aos pedidos feitos ao mesmo</resultado>
+        <resultado path="script.py">  Script em python que é responsável por passar por todas as entradas, e a partir das mesmas criar páginas html que servirão de perfil para cada uma das pessoas, representadas nas entradas do dataset</resultado>
+        <resultado path="server.js"> Código javascript que contém a criação e routing do servidor responsável por responder aos pedidos dos utilizadores, utilizando as páginas html criadas pelo indexMaker e script.py </resultado>
+        <resultado path="pessoas/*.html"> Paǵinas html que criadas pelo script.py; Estas páginas html foram criadas com recurso ao w3.css e apresentam o perfil de utilizador de cada uma das pessoas representadas pelo dataset </resultado>
     </resultados>
 </manifesto>
