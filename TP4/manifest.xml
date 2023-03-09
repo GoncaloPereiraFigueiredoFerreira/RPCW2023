@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../template.dtd" type="application/xml-dtd"?>
+<manifesto>
+    <meta>
+        <titulo>Trabalho de casa 3</titulo>
+        <data>2023-03-09</data>
+        <autor>
+            <nome>Gonçalo Ferreira</nome>
+            <id>pg50404</id>
+            <gitlink>https://github.com/GoncaloPereiraFigueiredoFerreira/RPCW2023.git</gitlink>
+        </autor>
+        <uc>RPCW</uc>
+    </meta>
+    <resumo>
+        <p>Para o 4º TPC da UC de RPCW, foi nos pedido que desenvolvessemos uma aplicação web, que desempenhasse a função de uma TODO list, que permita ao utilizador adicionar e completar tarefas</p>
+        <p>Este objetivo foi cumprido, e a execução da aplicação é possivel através da execução do comando "node json-server.js".</p>
+    </resumo>
+    <resultados>
+        <resultado path="json-server.js"> Ficheiro de código Javascript que contém a criação e routing do servidor que aloja a aplicação da lista de tarefas </resultado>
+        <resultado path="templates.js"> Ficheiro de código Javascript responsável pela geração das páginas HTML utilizadas na apresentação da aplicação ao utilizador</resultado>
+    </resultados>
+</manifesto>
