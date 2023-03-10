@@ -1,0 +1,13 @@
+{
+  "completed": [
+    {
+      "id": 3,
+      "deadline": "2023-03-12T19:00",
+      "worker": "Gonçalo",
+      "task": "TPC RPCW",
+      "type": "Work",
+      "completion": "2023-03-10T17:56"
+    }
+  ],
+  "todos": []
+}

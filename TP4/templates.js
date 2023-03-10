@@ -1,15 +1,49 @@
-exports.todoPage = function(todos, completed){
+exports.todoPage = function(todos, completed, edit){
     let todoTR=""
     let completedTR=""
     for (let i in todos){
+        if ( edit.includes(todos[i]["id"])){
+            
+            todoTR+=`
+            <form action="http://localhost:7777/edit${todos[i]["id"]}" method="post" id="edit"></form>
+            <tr class="w3-hover-light-blue" >
+                <td> <input class="w3-input w3-round" type="datetime-local" name="deadline" form="edit" required/></td>
+                <td> <input class="w3-input w3-round" type="text" name="task" form="edit" required/></td>
+                <td> <input class="w3-input w3-round" type="text" name="worker" form="edit" required/></td>
+                <td> <select class="w3-select" name="type"  form="edit" required>
+                        <option value="" disabled selected>Choose your option</option>
+                        <option value="Family">Family</option>
+                        <option value="House">House</option>
+                        <option value="Work">Work</option>
+                        <option value="Friends">Friends</option>
+                        <option value="Fun">Fun</option>
+                        <option value="Other">Other</option>
+            </select>  </td>
+                <td>
+                    <button type="submit" form="edit" class="w3-btn w3-teal w3-mb-2 w3-small">Confirm</button>
+                </td>
+            </tr>
+            `
+        }
+        else{
+        
         todoTR+=`
-        <tr class="w3-hover-light-blue" data-href="http://localhost:7777/complete${i}">
-            <td>${todos[i]["deadline"]}</td>
-            <td>${todos[i]["task"]}</td>
-            <td>${todos[i]["worker"]}</td>
-            <td>${todos[i]["type"]}</td>
+        <tr class="w3-hover-light-blue" >
+            <td data-href="http://localhost:7777/complete${todos[i]["id"]}">${todos[i]["deadline"]}</td>
+            <td data-href="http://localhost:7777/complete${todos[i]["id"]}">${todos[i]["task"]}</td>
+            <td data-href="http://localhost:7777/complete${todos[i]["id"]}">${todos[i]["worker"]}</td>
+            <td data-href="http://localhost:7777/complete${todos[i]["id"]}">${todos[i]["type"]}</td>
+            <td>
+            <form action="http://localhost:7777/edit${todos[i]["id"]}" method="post" id="myForm">
+                <button type="submit" class="w3-btn w3-teal w3-mb-2 w3-small">Edit</button>
+            </form>
+            <form action="http://localhost:7777/removeTD${todos[i]["id"]}" method="post" id="myForm">
+                <button type="submit" class="w3-btn w3-teal w3-mb-2 w3-small">Remove</button>
+            </form>
+            </td>
         </tr>
         `
+        }
     }
     for (let i in completed){
         completedTR+=`
@@ -19,7 +53,11 @@ exports.todoPage = function(todos, completed){
             <td>${completed[i]["worker"]}</td>
             <td>${completed[i]["type"]}</td>
             <td>${completed[i]["completion"]}</td>
-            
+            <td>
+            <form action="http://localhost:7777/removeCM${completed[i]["id"]}" method="post" id="myForm">
+                <button type="submit" class="w3-btn w3-teal w3-mb-2 w3-small">Remove</button>
+            </form>
+            </td>
         </tr>
         `
     }
@@ -60,7 +98,16 @@ exports.todoPage = function(todos, completed){
 
                                         
                                         <label>What's the type of the task?</label>
-                                        <input class="w3-input w3-round" type="text" name="type" required>
+                                        
+                                        <select class="w3-select" name="type" required>
+                                            <option value="" disabled selected>Choose your option</option>
+                                            <option value="Family">Family</option>
+                                            <option value="House">House</option>
+                                            <option value="Work">Work</option>
+                                            <option value="Friends">Friends</option>
+                                            <option value="Fun">Fun</option>
+                                            <option value="Other">Other</option>
+                                        </select> 
 
                                 </fieldset>
                                 </div>
@@ -72,14 +119,16 @@ exports.todoPage = function(todos, completed){
                 </div>
                     
                     <div class="w3-cell-row">
-                        <div class="w3-container w3-red w3-cell w3-margin-bottom w3-text-black" style="padding: 0px 30px;width:50%;">
+                        <div class="w3-container w3-red w3-cell w3-responsive w3-half w3-margin-bottom w3-text-black" style="padding: 0px 30px;">
                             <h3>Tasks </h3>
+                           
                             <table border=1 class="w3-table w3-blue-gray w3-centered w3-hoverable">                
                                 <tr class="w3-teal" >
                                 <th>DeadLine</th>
                                 <th>Task</th>
                                 <th>Tasker</th>
                                 <th>Type</th>
+                                <th></th>
                                 </tr>
                                 ${todoTR}
                             </table>
@@ -89,18 +138,19 @@ exports.todoPage = function(todos, completed){
                             <br></br>
                         </div>
                         
-                        <div class="w3-container w3-green w3-cell w3-margin-bottom w3-text-black" style="padding: 0px 30px;width:50%;">
+                        <div class="w3-container w3-green w3-cell w3-responsive w3-margin-bottom w3-half w3-text-black" style="padding: 0px 30px;">
                             <h3>Tasks Completed </h3>
-                            <table border=1 class="w3-table w3-blue-gray w3-centered w3-hoverable">                
-                                <tr class="w3-teal">
-                                    <th>DeadLine</th>
-                                    <th>Task</th>
-                                    <th>Tasker</th>
-                                    <th>Type</th>
-                                    <th>Completed</th>
-                                    </tr>
-                                    ${completedTR}
-                            </table>
+                                <table border=1 class="w3-table w3-blue-gray w3-centered w3-hoverable">                
+                                    <tr class="w3-teal">
+                                        <th>DeadLine</th>
+                                        <th>Task</th>
+                                        <th>Tasker</th>
+                                        <th>Type</th>
+                                        <th>Completed</th>
+                                        <th></th>
+                                        </tr>
+                                        ${completedTR}
+                                </table>
                             <br></br>
                             <br></br>
                             <br></br>
@@ -111,7 +161,7 @@ exports.todoPage = function(todos, completed){
             </div>
             <script>
             document.addEventListener("DOMContentLoaded", ()=>{
-                const rows = document.querySelectorAll("tr[data-href]");
+                const rows = document.querySelectorAll("td[data-href]");
                 console.log(rows);
                 rows.forEach( row=>{
                     row.addEventListener("click",()=>{
